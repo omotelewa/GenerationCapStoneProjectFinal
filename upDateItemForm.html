@@ -82,8 +82,13 @@
     </div>
   </nav>
     <main class="form-signing w-25 m-auto">
-        <h1>Add item</h1>
+        <h1>Update Items</h1>
         <form  id="itemForm">
+          <div class="form-floating">
+            <input type="text" class="form-control" placeholder="id" id="id">
+            <label for="id">ID</label>
+        </div>
+        <p id="flavorError"></p>
         <div class="form-floating">
             <input type="text" class="form-control" placeholder="flavor" id="flavor">
             <label for="flavor">Flavor</label>
@@ -110,7 +115,7 @@
             <label for="imageUrl">Image Url</label>
         </div>
         <p id="imageError"></p>
-        <input type="submit" value="submit" class="my-2 btn btn-primary form-control"/>
+        <input type="submit" value="update" class="my-2 btn btn-primary form-control"/>
         <p id="successMessage"></p>
      </form>
 
