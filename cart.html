@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css">
+  
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- Slick CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+  
+  </head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse c-nav" id="navbarSupportedContent">
+        <div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="itemForm.html">Add Items</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cart-div">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Help</a>
+            </li>
+          </ul>
+          <div class="cart-icon"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> Your Cart</div>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="outer-div">
+      <!-- <div class="head-cart">
+            <h4>Product</h4>
+            <h4>Price</h4>
+        </div> -->
+      <div class="body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Itme NO.</th>
+              <th scope="col">Image</th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- <tr>
+                <td>2</td>
+                <td>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9H4ptg9XXEmI4RRWXBqGlLsF9FdNpCMHuWTOvmZtMow&s" alt="coockie" height="60px" width="60px" class="cart-img">
+                </td>
+                <td>Orange</td>
+                <td class="price">10</td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr> -->
+
+
+
+          </tbody>
+        </table>
+        <hr>
+
+        <div class="total-div col-md-10">
+          <div class="total-output">
+            <h3>Total : $</h3>
+            <h4 id="total-price">0</h4>
+          </div>
+        </div>
+
+        <button type="button" onclick="calculateFun()" id="calculate">Calculate</button>
+
+        <!-- <table class="table">
+            <tbody>
+
+              <tr>
+                <td><h3>Total</h3></td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td id="total-price">$0</td>
+              </tr>
+
+            </tbody>
+          </table> -->
+        <!-- <div class="total-div">
+            <div class="heading-cart"><h3>Total</h3></div>
+            <p>$100</p>
+          </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- my JS  -->
+  <script src="js/itemsController.js"></script>
+  <script src="js/addToCart.js"></script>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+  <!-- Jquerry  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+  </script>
+  <!-- Slick SLiders  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    </script>
+
+</body>
+
+</html>
